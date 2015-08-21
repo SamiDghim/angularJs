@@ -1,0 +1,34 @@
+<div class="container">
+	<div class="row">
+		<!--ROW 1-->
+		<div class="col-md-home-12" style="background: #fff;padding:20px;">
+			<h3 style="margin-bottom:40px;">{{"partials.index.sendmail" | translate}}</h3>
+
+			<form role="form">
+			  <div class="form-group">
+			    <label for="label-to">{{"partials.index.mailTo" | translate}}</label>
+						<select id="label-to" class="form-control input-lg width80" ng-model="mailBox.to">
+							<option>charradi.cha@gmail.com</option>
+								<option>pfe2015enis@gmail.com</option>
+								<option>charradibilel@hotmail.com</option>
+						</select>
+			  </div>
+
+				<div class="form-group">
+			    <label for="label-from">{{"partials.index.mailSubject" | translate}}</label>
+					<input class="form-control input-lg width80" type="text" placeholder="..." ng-model="mailBox.subject">
+			  </div>
+
+				<div class="form-group">
+			    <label for="label-until">{{"partials.index.mailText" | translate}}</label>
+					<textarea class="form-control input-lg width80" rows="3" placeholder="..." ng-model="mailBox.body"></textarea>
+			  </div>
+
+				<div class="form-group">
+			    <label for="label-until"></label>
+						<button ng-click="send()" class="btn btn-style-2 width80">{{"partials.index.mailSend" | translate}}</button>
+				</div>
+		</form>
+</div>
+<div style="clear:both;margin-bottom:50px;">
+<!-- /container -->

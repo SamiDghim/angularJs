@@ -1,0 +1,49 @@
+<div class="container">
+			<div class="row">
+
+				<div class="col-md-home-12" style="background: #fff;padding:20px;">
+						<div class="tabbable">
+						    <ul class="nav nav-tabs">
+						      <li class="active"><a href="#/inbox" data-toggle="tab">{{"partials.index.inbox" | translate}}</a></li>
+						      <li><a href="#/outbox" data-toggle="tab">{{"partials.index.outbox" | translate}}</a></li>
+						    </ul>
+								<!--TAB CONTENT-->
+						    <div class="tab-content">
+									<!--TAB 1-->
+						      <div class="tab-pane active" id="inbox">
+
+										<h3>{{"partials.index.inbox" | translate}}</h3>
+
+										<div class="tablenav">
+											<div class="tablenav-title"></div>
+											<div class="tablenav-select"><input class="form-control input" type="date"  ></div>
+											<div class="tablenav-button">
+												<a href="#/sendmail" class="btn btn-default" role="button" style="padding:15px 12px;"><span class="glyphicon glyphicon-envelope modal-icon"></span> {{"partials.index.sendmail" | translate}}</a>
+											</div>
+										</div>
+
+										<div class="table-responsive">
+											<table class="table">
+												<thead>
+														<tr>
+															<th class="active">{{"partials.index.mailDate" | translate}}</th>
+												  		<th class="active">{{"partials.index.mailFrom" | translate}}</th>
+												  		<th class="active">{{"partials.index.mailSubject" | translate}}</th>
+															<th class="active" width="280"></th>
+												    </tr>
+												</thead>
+												<tbody>
+												   <tr ng-repeat="inbox in inboxs  ">
+                             <td>{{inbox.maildate}}</td>
+                             <td>{{inbox.mailfrom}}</td>
+                             <td>{{inbox.mailsubject}}</td>
+															<td>
+																<button type="button" class="btn btn-default-mini btn-edit" onclick="window.location='#/sendmail';"><span class="glyphicon glyphicon-circle-arrow-left modal-icon"></span> {{"partials.index.mailReply" | translate}}</button>
+																<button type="button" class="btn btn-default-mini btn-edit" onclick="window.location='#/openmail';"><span class="glyphicon glyphicon-file modal-icon"></span>  {{"partials.index.mailOpen" | translate}}</button>
+															</td>
+														</tr>
+
+												 </tbody>
+										  </table>
+										</div>
+									</div>

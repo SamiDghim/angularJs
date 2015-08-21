@@ -1,0 +1,56 @@
+<div class="container">
+<div class="row">
+        <!--ROW 1-->    
+    <div class="col-md-home-12" style="background: #fff;padding:20px;">
+        <ul class="nav nav-tabs abstab">  
+        <li class="active">  
+        <a href="#">Absence Application</a> </li>   
+        <li><a href="#/advanceSalary">Time Account</a></li>  
+
+        </ul>  
+        <div class="tab-content">
+            <h3>Absence Application</h3>                      
+            <div class="tablenav">
+                <div class="tablenav-title">Absences since</div>
+                    <div class="tablenav-select"><input class="form-control input" type="date" placeholder="date" value={{startdate}} ng-model="startdate" ng-change="updateList()"></div>
+                    <div class="tablenav-button">
+                        <a ng-click="gotoAbsenceRequestNewPage()" class="btn btn-default" role="button" style="padding:15px 12px;"><span class="glyphicon glyphicon-plus-sign modal-icon"></span> Add Absence Time</a>
+                    </div>
+            </div>
+        	<div class="table-responsive" >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="active">Employee</th>
+                            <th class="active">Type</th>
+                            <th class="active">From</th>
+                            <th class="active">To</th>
+                            <th class="active" width="60">Status</th>
+                            <th class="active" width="210"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="absence in absenceRequests | filter: AbsenceFilter">   
+                          
+                                <td>{{absence.idemp.firstName}} {{absence.idemp.lastName}}</td>
+                                <td>{{absence.type}}</td>
+                                <td>{{absence.fromDate}}</td>
+                                <td>{{absence.untilDate}}</td>
+                                <td>
+                                    <span ng-if="absence.status==0" class="status-informed">Encours</span>
+                                    <span ng-if="absence.status==1" class="status-confirmed">Accepte</span>
+                                    <span ng-if="absence.status==2" class="status-denied">Refuse</span>
+                                  
+                                </td>
+                                <td><button class="btn btn-default-mini btn-delete" ng-click="deleteAbsenceRequest(absence)">x</button>
+                                  <a href="#/absenceRequest/edit/{{absence.id}}"  class="btn btn-default-mini btn-edit"><span class="glyphicon glyphicon-pencil modal-icon"></span>Edit</a> </td>
+                         
+                            </tr>
+                                                   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

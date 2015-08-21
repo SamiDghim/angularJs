@@ -1,0 +1,49 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-home-12" style="background: #fff;padding:20px;">
+        <ul class="nav nav-tabs abstab">  
+            <li ><a href="#/absenceRequest/list">Absence Application</a> </li>
+            <li class="active"><a href="#">Time Account</a></li>  
+        </ul>  
+       <div class="tab-pane" id="time-accounts">
+            <h3>Time Accounts</h3>
+                <div class="tablenav">
+                    <div class="tablenav-button">
+                            <a ng-click="AddAbsence()"class="btn btn-default" role="button" style="padding:15px 12px;"><span class="glyphicon glyphicon-plus-sign modal-icon"></span> Add Absence Time</a>
+                    </div>
+                </div>  
+               <div class="table-responsive" >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="active">Employee</th>
+                            <th class="active">SALARY</th>
+                         
+                            <th class="active" width="60">Status</th>
+                            <th class="active" width="210"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="advanceSalary in advanceSalarys | filter: AdvanceSalaryFilter">   
+                          
+                                <td>{{advanceSalary.idemp.firstName}} {{advanceSalary.idemp.lastName}}</td>
+                                <td>{{advanceSalary.salary}}</td>
+                              
+                                <td>
+                                    <span ng-if="advanceSalary.status==0" class="status-informed">Encours</span>
+                                    <span ng-if="advanceSalary.status==1" class="status-confirmed">Accepte</span>
+                                    <span ng-if="advanceSalary.status==2" class="status-denied">Refuse</span>
+                                  
+                                </td>
+                                <td><button class="btn btn-default-mini btn-delete" ng-click="deleteAbsenceRequest(absence)">x</button>
+                                  <a href="#/absenceRequest/edit/{{absence.id}}"  class="btn btn-default-mini btn-edit"><span class="glyphicon glyphicon-pencil modal-icon"></span>Edit</a> </td>
+                         
+                            </tr>
+                                                   
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

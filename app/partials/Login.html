@@ -1,0 +1,22 @@
+<div class="container">
+			<div class="row">
+				<!--ROW 1-->
+				<div class="col-md-4"></div>
+			  	<div class="col-md-4" style="background:#fff;padding: 20px;text-align: center;-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;">
+
+							<div class="icon-box"><span class="glyphicon glyphicon-user icon-big"></span></div>
+							 <input class="form-control input-lg" type="text" name="login" placeholder='{{"partials.login.user" | translate}}'  ng-model="login">
+							 <input class="form-control input-lg" type="password" name="password" placeholder='{{"partials.login.password" | translate}}'  ng-model="password" required>
+
+
+							<button type="submit" class="btn btn-style-2" ng-click="loginfunction()">{{"partials.login.button" | translate}}</button>
+
+							<div class="errormsg">  <span translate="{{errors}}"></span></div>
+
+							<div style="clear:both;"></div>
+				</div>
+					<div class="col-md-4 last"></div>
+				</div>
+				<div style="clear:both;margin-bottom:50px;">
+
+</div>

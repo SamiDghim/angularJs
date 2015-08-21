@@ -1,0 +1,38 @@
+<!-- container -->
+<div class="container">
+<div class="row">
+<!--ROW 1-->
+<div class="col-md-home-12" style="background: #fff;padding:20px;">
+
+	<h3 style="margin-bottom:40px;">{{"partials.index.mailbox" | translate}}</h3>
+
+	<form role="form">
+	  <div class="form-group">
+	    <label for="label-to"><b>{{"partials.index.mailFrom" | translate}}</b></label>
+				<div class="mailbox-text width80">{{selected.mailfrom}}</div>
+				<div style="clear:both;"></div>
+	  </div>
+
+		<div class="form-group">
+	    <label for="label-from"><b>{{"partials.index.mailSubject" | translate}}</b></label>
+				<div class="mailbox-text width80">{{selected.mailsubject}}</div>
+				<div style="clear:both;"></div>
+	  </div>
+
+		<div class="form-group">
+	    <label for="label-until"><b>{{"partials.index.mailText" | translate}}</b></label>
+			<div class="mailbox-message width80">
+        {{selected.mailText}}
+      </div>
+			<div style="clear:both;"></div>
+	  </div>
+
+		<div class="form-group" style="margin-top:50px;">
+	    <label for="label-until"></label>
+				<a href="#/inbox" class="btn btn-style-2 width80">{{"partials.index.back" | translate}}</a>
+		</div>
+
+	</form>
+ </div>
+<div style="clear:both;margin-bottom:50px;">
+<!-- /container -->

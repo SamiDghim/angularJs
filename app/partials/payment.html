@@ -1,0 +1,28 @@
+<div class="container">
+<div class="row">   
+    <div class="col-md-home-12" style="background: #fff;padding:20px;">
+       
+        <ul class="nav nav-tabs abstab">  
+        <li class="active">  
+        <a href="#">Fiches de paie</a> </li>   
+        <li><a href="#/advanceSalary">Demande d 'avance</a></li>  
+
+        </ul>  
+							
+				<h3 align="center">Fiches de paie</h3>
+
+			<div class="tablenav">
+				<div class="tablenav-select" style="float:right;"><input class="form-control input" type="date" placeholder="date" ng-change="search()" ng-model="searchdate"></div>
+				<div class="tablenav-title" style="float:right;">Search Date</div>
+			</div>
+				
+				
+				
+				<div ng-repeat="payment in payments | filter: PaymentFilter">
+				<a href="#/payment/{{payment.id}}" class="btn btn-style-2" role="button">{{payment.month}} {{payment.year}}</a>
+				</div>
+				
+     
+    </div>
+</div>
+</div>

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en" ng-app="kioskapp">
+<head>
+  <meta charset="utf-8">
+  <!--
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  -->
+  <title translate="{{pagename}}"> </title>
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/github-fork-ribbon-css/gh-fork-ribbon.css" />
+  <link rel="stylesheet" href="bower_components/pure/pure.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/app.css">
+
+
+
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
+  <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <script src="bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+  <script src="bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+  <script src="bower_components/angular-translate-handler-log/angular-translate-handler-log.js"></script>
+  <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+  <!-- endbower -->
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/loginController.js"></script>
+  <script src="js/controllers/mainmenuController.js"></script>
+  <script src="js/controllers/applicationController.js"></script>
+  <script src="js/services/AccessService.js"></script>
+  <script src="js/services/ApplicationService.js"></script>
+  <script type="text/javascript" src="lib/pdfjs/pdf.js"></script>
+  <script type="text/javascript" src="lib/pdfjs/compatibility.js"></script>
+  <script src="js/services/LocaleService.js"></script>
+  <script src="js/directives/LanguageSelectDirective.js"></script>
+
+<body >
+
+ <div class="navbar navbar-style navbar-fixed-top" role="navigation" ng-controller="NavController">
+
+  <div class="container" ng-if="!loggedin">
+
+      <div class="navbar-title only-title">
+          <div class="navbar-title-txt">
+            {{"partials.index.title" | translate}}
+            </div>
+      </div>
+
+
+
+  </div>
+    <div class="container" ng-if="loggedin">
+      <div class="navbar-dropdown">
+        <div class="btn-group floatLeft">
+          <button type="button" class="dropdown-button navbar-dropdown-style" data-toggle="dropdown" >
+            <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+          </button>
+
+          <ul class="dropdown-menu">
+            <li class="active">
+              <a href="#/menu">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-home"></span></div>
+                {{"partials.index.home" | translate}}
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#/search">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-search"></span></div>
+                {{"partials.index.search" | translate}}
+
+              </a>
+            </li>
+
+            <li>
+              <a href="" data-toggle="modal" data-target="#mailbox">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-envelope"></span>
+
+                </div>
+                {{"partials.index.mailbox" | translate}}
+
+
+              </a>
+            </li>
+
+            <li>
+              <a href="" data-toggle="modal" data-target="#application">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-flag"></span></div>
+                {{"partials.index.application" | translate}}
+
+
+              </a>
+            </li>
+
+            <li>
+              <a href="" data-toggle="modal" data-target="#timerecord">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-time"></span></div>
+                {{"partials.index.timerecord" | translate}}
+              </a>
+            </li>
+
+            <li>
+              <a href="#/certification">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-list-alt"></span></div>
+                {{"partials.index.certification" | translate}}
+              </a>
+            </li>
+
+            <li>
+              <a href="#/payment">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-euro"></span></div>
+                {{"partials.index.payment" | translate}}
+
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#/profile">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-user"></span></div>
+                {{"partials.index.account" | translate}}
+
+
+              </a>
+            </li>
+
+            <li>
+              <a href="#/services">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-info-sign"></span></div>
+                {{"partials.index.service" | translate}}
+
+
+              </a>
+            </li>
+
+
+            <li class="dropdown-header">
+              {{userFirstName}} {{userLastName}}<br> {{"patirals.index.userId" | translate}}: {{userID}}
+            </li>
+
+            <li>
+              <a ng-click="loggout()">
+                <div class="dropdown-icons"><span class="glyphicon glyphicon-off"></span></div>
+                {{"partials.index.logout" | translate}}
+
+              </a>
+            </li>
+
+          </ul>
+          </div>
+      </div>
+
+      <div class="navbar-notif-button" >
+        <div class="btn btn-lg ">
+           <a href="#/notification1"
+            > <i
+            class="glyphicon glyphicon-bell white"></i> <span class="badge badge-alert">7</span>
+
+          </a>
+
+
+        </div>
+      </div>
+      <div class="navbar-back-button" >
+        <a href="javascript:history.back()" class="btn-default-style btn-style-1">{{"partials.index.back" | translate}}</a>
+
+      </div>
+
+
+      <div class="navbar-title">
+          <div class="navbar-title-txt"  >
+            <span translate="{{pagename}}"></span>
+          </div>
+
+
+      </div>
+
+      <div class="navbar-logout" >
+          <a ng-click="loggout()" class="btn-default-style btn-style-1">&nbsp;&nbsp;{{"partials.index.logout" | translate}}&nbsp;&nbsp;</a>
+      </div>
+
+
+      <div class="navbar-personal" >
+        <a href="#/profile" class="btn-default-style1 btn-style-1">
+        <div class="navbar-personal-icon">
+          <span class="glyphicon glyphicon-user"></span>
+        </div>
+        <div class="navbar-personal-txt">
+            <b>{{userFirstName}} {{userLastName}}</b><br/>
+          <b> {{"patirals.index.userId" | translate}}: {{userID}}</b>
+        </div>
+        </a>
+
+      </div>
+
+
+
+
+
+
+
+    </div>
+   <div align="right" ng-translate-language-select>
+   </div>
+ </div>
+<!-- /fixed navbar -->
+
+ <div ng-view>
+ </div>
+ <!-- !!MODAL!! -->
+<!-- Modal: Mailbox -->
+<div class="modal fade" id="mailbox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <div class="modal-header-title">
+            <span class="glyphicon glyphicon-envelope modal-icon"></span>
+            <span class="modal-title" id="myModalLabel">{{"partials.index.mailbox" | translate}}</span>
+          </div>
+          <div style="position: absolute; right: 40px; margin-right: -20px; margin-top: -5px;"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div>
+
+          </div>
+          <div class="modal-body">
+            <a href="#/inbox" class="btn btn-style-2 mailbtn" role="button" >{{"partials.index.inbox" | translate}}</a>
+            <a href="#/outbox" class="btn btn-style-2 mailbtn" role="button" >{{"partials.index.outbox" | translate}}</a>
+          </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modal: Application -->
+<div class="modal fade" id="application" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <div class="modal-header-title">
+            <span class="glyphicon glyphicon-flag modal-icon"></span>
+            <span class="modal-title" id="myModalLabel">{{"partials.index.application" | translate}}</span>
+          </div>
+          <div style="position: absolute; right: 40px; margin-right: -20px; margin-top: -5px;"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div>
+
+          </div>
+          <div class="modal-body">
+            <a href="#/absenceRequest/list" class="btn btn-style-2 appbtn" role="button" >{{"partials.index.absenceapplication" | translate}} </a>
+            <a href="#/advanceSalary" class="btn btn-style-2 appbtn" role="button">{{"partials.index.timeapplication" | translate}}</a>
+          </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Modal: Time Record -->
+<div class="modal fade" id="timerecord" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+          <div class="modal-header-title">
+            <span class="glyphicon glyphicon-time modal-icon"></span>
+            <span class="modal-title" id="myModalLabel">{{"partials.index.timerecord" | translate}}   </span>
+          </div>
+          <div style="position: absolute; right: 40px; margin-right: -20px; margin-top: -5px;"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div>
+
+          </div>
+          <div class="modal-body">
+            <a href="#/timerecords" class="btn btn-style-2 timerecbtn" role="button" >
+              {{"partials.index.timecorrection" | translate}}
+                 </a>
+            <a href="#/timestatus" class="btn btn-style-2 timerecbtn" role="button">
+              {{"partials.index.timestatus" | translate}}
+            </a>
+          </div>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+ <!-- !!END-MODAL!! -->
+
+
+<script>
+$(document).ready(function() {
+var hash = window.location.hash;
+hash && $('ul.nav a[href="' + hash + '"]').tab('show');
+$('.mailbtn').click(function() {
+    $('#mailbox').modal('hide');
+});
+$('.appbtn').click(function() {
+    $('#application').modal('hide');
+});
+$('.timerecbtn').click(function() {
+    $('#timerecord').modal('hide');
+});
+$('.accbtn').click(function() {
+    $('#account').modal('hide');
+});
+$('.nav-tabs a').click(function (e) {
+  $(this).tab('show');
+  var scrollmem = $('body').scrollTop();
+  window.location.hash = this.hash;
+  $('html,body').scrollTop(scrollmem);
+});
+});
+</script>
+
+
+
+</body>
+</html>

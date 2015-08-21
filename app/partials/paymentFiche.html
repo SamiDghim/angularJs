@@ -1,0 +1,139 @@
+
+<div>
+	<div class="container">
+<div style="float:left;width:50%;"><h3 style="margin:19px 0 14px 0;"> Disycs</h3></div>
+
+		<div style="float:left;width:50%;">
+			<div class="tablenav-button" style="margin-top:5px;float:right;">
+			</div>
+
+		</div>
+	
+<div style="border:1px solid black; width:100%">
+
+
+
+                    <div id='print-div1' class="print_div">
+					
+<div class="about-us">
+<div id="fromHTMLtestdiv">
+
+              		          <div style="height: 70px ;text-align:left; width: 100%; border-bottom: 1px solid #000000 "> 
+   <div style="float:left; width:50%;" >
+   
+ 
+   </div>
+   <div style="margin-left:50% ; text-align:right;" >
+<h4> {{payment.month}} {{payment.year}}</h4>
+  
+   </div>
+                       </div> <div class="text-center">  <br>      <h2 style="text-align:center"><p> Fiche de Paie </p></h2>  <br>
+                                </div>
+                          
+                          
+                          
+                          <div style="height: 100px ;text-align:left; width: 100%;"> 
+   <div style="float:left; width:50%;" >
+   <h4> Matricule:  {{payment.idemp.id}}</h4>
+   <h4> Nom et prenom : {{payment.idemp.firstName}} {{payment.idemp.lastName}}</h4>
+   <h4> Fonction : {{payment.idemp.post}}</h4>
+  </div>
+   <div style="margin-left:75% ; text-align:left;" >
+    <h4> Code CNSS: {{payment.idemp.cin}}</h4>
+   <h4> CIN : {{payment.idemp.cin}}</h4>
+   <h4> Fonction : {{payment.idemp.post}}</h4>
+  
+   </div>
+                       </div>   
+                          
+                          
+
+                        <style type="text/css">
+                           table {
+ border-collapse:collapse;
+ width:100%;
+ }
+th, td {
+ border:1px solid black;
+ }
+caption {
+ font-weight:bold
+ }
+                        </style>
+
+                        <table>
+
+
+ 
+  <thead>
+    <tr>
+      <th width="40%">
+        Designation </th>
+      <th>
+        Nombre</th>
+       <th>
+        Salaire / Primes </th>
+       <th>
+        Retenues
+        </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr height="100px">
+      <td>
+Nombre de jours de presence
+      </td>
+         <td>
+{{payment.presence}}
+      </td>
+       
+      <td>
+      
+        </td>
+      <td>
+      
+    </tr>
+    
+     <tr height="150px">
+      <td>
+Salaire brut <br>
+Retenue CNSS <br>
+Salaire brut imposable<br>
+Retenue a la source<br>
+      </td>
+      <td>
+        </td>
+      <td>
+       {{payment.idContrat.salary}} <br> <br> 
+         {{payment.idContrat.salary}}
+         <td>
+          <br>
+ 55.080  <br> <br>
+ 58.502
+      </td>
+    </tr>
+    <tr>
+    <td colspan="3" height="30px" align="center"> Net a payer </td>
+    <td>  {{payment.idContrat.salary}}</td>
+    </tr>
+    </tbody>
+    </table>
+                            </div>
+                          <br><br><br>
+                          <div align="center" class="avoid-this">
+                          
+                          
+                          
+                             <a class="btn btn-success  hidden-print" onclick="javascript:demoFromHTML('file1')"> Enregistrer PDF<span class=" 	glyphicon glyphicon-file modal-icon"></span></a>
+                               <a class="btn btn-primary  hidden-print" onclick="javascript:demoFromHTML('file1')"> <span class="glyphicon glyphicon-print modal-icon"></span>Imprimer</a>
+                             
+                             </div>   </div>
+                              
+                                
+                                </div>
+                                
+	</div>
+
+</div>
+</div>
+

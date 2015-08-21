@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-home-12" style="background: #fff;padding:20px;">
+      <div class="tabbable">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#/profile">Profile</a></li>
+          <li ><a href="#/accountaddress">{{"partials.index.account.address" | translate}}</a></li>
+          <li><a href="#/accountbank">{{"partials.index.account.bank" | translate}}</a></li>
+        </ul>
+
+        <h3><span   class="glyphicon glyphicon-user profile" ></span></h3>
+
+        <div class="tablenav">
+          <div class="tablenav-button">
+
+            <a ng-click="editProfile()" class="btn btn-default" role="button" style="padding:15px 12px;margin-bottom:5px;">
+              <span class="glyphicon glyphicon-pencil modal-icon"></span>edit profile</a>
+          </div>
+        </div>
+
+        <form role="form" style="margin-top:30px;">
+          <div class="form-group">
+            <label for="label-to"><b>firstName :</b></label>
+            <div class="account-text width80">{{account.Profile.FIRST_NAME}}</div>
+            <div style="clear:both;"></div>
+          </div>
+
+
+          <div class="form-group">
+            <label for="label-type"><b>last name</b></label>
+            <div class="account-text width80">{{account.Profile.LAST_NAME}}</div>
+            <div style="clear:both;"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="label-from"><b>date of birth : </b></label>
+            <div class="account-text width80">{{account.Profile.DOB}}</div>
+            <div style="clear:both;"></div>
+          </div>
+
+          <div class="form-group">
+            <label for="label-from"><b>email : </b></label>
+            <div class="account-text width80">{{account.Profile.E_MAIL}}</div>
+            <div style="clear:both;"></div>
+          </div>
+          <div class="form-group">
+            <label for="label-from"><b>rib : </b></label>
+            <div class="account-text width80">{{account.Profile.RIB}}</div>
+            <div style="clear:both;"></div>
+          </div>
+          <div class="form-group">
+            <label for="label-from"><b>situation : </b></label>
+            <div class="account-text width80">{{account.Profile.SITUATION}}</div>
+            <div style="clear:both;"></div>
+          </div>
+
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+  <div style="clear:both;margin-bottom:50px;">

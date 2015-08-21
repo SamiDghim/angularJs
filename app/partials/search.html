@@ -1,0 +1,36 @@
+<div class="container">
+<div class="row">
+	<!--ROW 1-->
+		<div class="col-md-home-12" style="background: #fff;padding:20px;">
+			<h3>{{"partials.search.employeesearch" | translate}}</h3>
+ 				<div class="tablenav" style="height:80px;">
+					<div class="tablenav-select" style="width:250px;">
+            <input class="form-control input"  ng-model="searchText" type="text" placeholder="{{'partials.search.searchIndex' | translate}}" style="height:60px;"> </div>
+				</div>
+
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+								<tr>
+                  <th class="active">{{"partials.search.Serial" | translate}} </th>
+                  <th class="active">{{"partials.search.Fname" | translate}}</th>
+						  		<th class="active">{{"partials.search.Lname" | translate}} </th>
+						  		<th class="active">{{"partials.search.Phone" | translate}} </th>
+						  		<th class="active">{{"partials.search.Email" | translate}} </th>
+						    </tr>
+						</thead>
+						<tbody>
+
+            <tr ng-repeat="employee in employees | filterMultiple:{id: searchText,firstName: searchText,lastName:searchText}">
+              <td>{{employee.id}}</td>
+              <td>{{employee.firstName}}</td>
+              <td>{{employee.lastName}}</td>
+              <td>{{employee.phone}}</td>
+              <td>{{employee.email}}</td>
+            </tr>
+						</tbody>
+				  </table>
+				</div>
+				</div>
+<div style="clear:both;margin-bottom:50px;">
+<!-- /container -->
