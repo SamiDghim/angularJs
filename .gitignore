@@ -1,1 +1,5 @@
 *.min.css
+app/lib
+app/img
+app/fonts
+app/DummyPDF
