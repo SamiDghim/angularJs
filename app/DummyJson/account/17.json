@@ -1,0 +1,38 @@
+{
+
+	"Address":{
+		"BEGDA":"2013-10-20",
+		"PAD_CONAM":"Tunisia",
+		"PAD_STRAS":"Route de l'Afran",
+		"PSTLZ_HR":"3003",
+		"PAD_ORT01":"Sfax",
+		"TELNR":"+216 21 082 206"
+	},
+	"BankAccount":{
+		"BEGDA":"2013-01-01",
+		"EMFTX":"Mahdi Njim",
+		"BANKS":"Tunisia",
+		"BANKK":"TUNXXX",
+		"BANKN":"1",
+		"HRPAD_IBAN00":"TN 125 1458 145"
+	},
+	"TravelExpress":{
+		"BEGDA":"2013-01-01",
+		"EMFTX":"Mahdi Njim",
+		"BANKS":"Tunisia",
+		"BANKK":"TUNXXX",
+		"BANKN":"1",
+		"HRPAD_IBAN00":"TN 125 1458 145"
+	},
+  "Profile":{
+    "FIRST_NAME":"Sami",
+    "LAST_NAME":"Dghim",
+    "E_MAIL":"samidghim@gmail.com",
+    "DOB":"20/12/1991",
+    "POST":"Ingénieir",
+    "RIB":"1234567",
+    "SITUATION":"maried"
+
+  }
+
+}

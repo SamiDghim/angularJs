@@ -1,0 +1,39 @@
+[
+	{
+		"REQUEST_ID":1,
+		"DATUM":"2013.11.11",
+		"BEGDA":"2013-11-14",
+		"BEGTI":"07:15:00",
+		"SUBTY":"Medical",
+		"SUBTYTEXT":"Krankheit ohne Attest",
+		"STATUS_TEXT":"informiert",
+		"NAME":"Arnim von Sachen",
+		"CURR_NOTICE":"This is a current notice",
+		"PAST_NOTICE":"This is a past notice"
+	},
+	{
+		"REQUEST_ID":2,
+		"DATUM":"2013.11.11",
+		"BEGDA":"14.11.2013",
+		"BEGTI":"07:15:00",
+		"SUBTY":"Medical",
+		"SUBTYTEXT":"Krankheit ohne Attest",
+		"STATUS_TEXT":"bestatigt",
+		"NAME":"Arnim von Sachen",
+		"CURR_NOTICE":"This is a current notice",
+		"PAST_NOTICE":"This is a past notice"
+	},
+	{
+		"REQUEST_ID":3,
+		"DATUM":"2013.11.11",
+		"BEGDA":"14.11.2013",
+		"BEGTI":"07:15:00",
+		"SUBTY":"Urlaubsantrag",
+		"SUBTYTEXT":"Urlaubsantrag",
+		"STATUS_TEXT":"abgelehnt",
+		"NAME":"Arnim von Sachen",
+		"CURR_NOTICE":"This is a current notice",
+		"PAST_NOTICE":"This is a past notice"
+	}
+
+]

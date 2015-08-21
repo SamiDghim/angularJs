@@ -1,0 +1,63 @@
+{
+	"success":"",
+	"msg":"",
+	"data":[
+		{
+			"request_id": "000C295F52031ED38698A5BE69FB2A4E",
+            "infotype": "work ",
+            "subty": "0100",
+            "abwart": "Urlaub",
+            "begda": "20130909",
+            "endda": "20130909",
+            "begin_time": "000000",
+            "end_time": "000000",
+            "bearbeiter": "Arnim von Sachsen",
+            "status": "SENT",
+            "status_text": "gesendet",
+            "abwtg": "1.00",
+            "abrtg": "1.00",
+            "abrst": "7.00",
+            "kaltg": "1.00",
+            "notiz": "test notice"
+
+		},
+		{
+			"request_id": "000C295F52031ED38698A5BE69FB2A4F",
+            "infotype": "work",
+            "subty": "0100",
+            "abwart": "Urlaub",
+            "begda": "20130909",
+            "endda": "20130909",
+            "begin_time": "000000",
+            "end_time": "000000",
+            "bearbeiter": "Arnim von Sachsen",
+            "status": "SENT",
+            "status_text": "gesendet",
+            "abwtg": "1.00",
+            "abrtg": "1.00",
+            "abrst": "7.00",
+            "kaltg": "1.00",
+            "notiz": ""
+
+		},
+            {
+                  "request_id": "000C295F52031ED38698A5BE69FB2A4E",
+            "infotype": "work ",
+            "subty": "0100",
+            "abwart": "Urlaub",
+            "begda": "20130909",
+            "endda": "20130909",
+            "begin_time": "000000",
+            "end_time": "000000",
+            "bearbeiter": "Arnim von Sachsen",
+            "status": "CONFIRMED",
+            "status_text": "bestatigt",
+            "abwtg": "1.00",
+            "abrtg": "1.00",
+            "abrst": "7.00",
+            "kaltg": "1.00",
+            "notiz": "test notice"
+
+            }
+	]
+}
