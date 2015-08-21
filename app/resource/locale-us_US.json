@@ -1,0 +1,84 @@
+{
+
+  "partials.button.save":"Save",
+
+  "partials.error.verif":"Please verify your cred",
+  "partials.error.blank":"Please enter a login",
+  "partials.error.allblank":"Please enter a login and password",
+
+  "partials.login.user":"Username",
+  "partials.login.password":"Password",
+  "partials.login.button" :"Login",
+
+
+  "partials.mainmenus.mailBox":"MailBox ",
+  "partials.mainmenus.service":"Services",
+  "partials.search.employeesearch":" Employee Search",
+
+
+  "patirals.index.userId":"Personal-Nr",
+  "partials.index.title":"Employee Self Service",
+  "partials.index.home":"Home",
+  "partials.index.search":"Search",
+  "partials.search.Serial":"Serial",
+  "partials.search.Fname":"First Name",
+  "partials.search.Lname":"Last Name",
+  "partials.search.Phone":"Phone",
+  "partials.search.Email":"E-mail",
+  "partials.search.searchIndex":"Surname, Name or Personal-Nr.",
+  "partials.index.mailbox":"Mailbox",
+  "partials.index.sendmail":"Send Email",
+  "partials.index.mailTo":"To",
+  "partials.index.mailFrom":"From",
+  "partials.index.mailSubject":"Subject",
+  "partials.index.mailText":"Message",
+  "partials.index.mailSend":"Send",
+  "partials.index.mailOpen":"Ouvrir",
+  "partials.index.mailDate":"Date",
+  "partials.index.inbox":"Inbox",
+  "partials.index.mailReply":"Reply",
+  "partials.index.outbox":"Outbox",
+  "partials.index.application":"Application",
+  "partials.index.absenceapplication":"Absence Application",
+  "partials.index.timeapplication":"Time Accounts",
+  "partials.index.timerecord":"Time Record",
+  "partials.index.timecorrection":"Time Correction",
+  "partials.index.timestatus":"Time Status",
+
+
+  "partials.index.certification":"Certification",
+  "partials.index.payment":"Payment",
+  "partials.index.account":"Account",
+
+  "partials.index.account.address":"Address",
+  "partials.index.account.address.new":"I have a new address",
+  "partials.index.account.address.edit":"Edit this address",
+  "partials.account.address.validF":"Valid from",
+  "partials.account.address.validT":"Valid to",
+  "partials.account.address.street":"Street",
+  "partials.account.address.city":"City",
+  "partials.account.address.phone":"Phone",
+
+
+  "partials.index.account.bank":"Bank Account",
+  "partials.index.account.bank.new":"I have a new Bank Account",
+  "partials.index.account.bank.edit":"Edit this Bank Account",
+
+  "partials.index.account.profile":"Profile",
+  "partials.index.account.profile.edit":"Edit profile",
+  "partials.index.profile.firstName":"FirstName",
+  "partials.index.profile.lastName":"Last Name",
+  "partials.index.profile.dob":"Date of birth ",
+  "partials.index.profile.situation":"Situation ",
+  "partials.index.profile.post":"Post ",
+  "partials.index.profile.rib":"Rib ",
+  "partials.index.account.profile.edit.required":"This field cannot be blank",
+
+  "partials.index.service":"Services",
+  "partials.index.back":"back",
+  "partials.index.logout":"Logout",
+  "partials.index.notif": "Notification"
+
+
+
+}

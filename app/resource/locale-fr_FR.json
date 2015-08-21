@@ -1,0 +1,79 @@
+{
+  "partials.button.save":"enregistrer",
+  "partials.error.verif":"vérifer votre information",
+  "partials.error.blank":"votre login",
+  "partials.error.allblank":"votre login et mot de passe",
+
+  "partials.login.user":"Votre nom",
+  "partials.login.password":"Mot de passe",
+  "partials.login.button" :"Entrer",
+
+
+  "partials.mainmenus.service":"Services",
+  "partials.search.employeesearch":"Recherche Employé",
+
+  "patirals.index.userId":"Personnel-Nbr",
+  "partials.index.title":"Service Employé",
+  "partials.index.home":"Accueil",
+  "partials.index.search":"Recherche",
+  "partials.search.Serial":"Personnel-Nbr",
+  "partials.search.Fname":"Nom",
+  "partials.search.Lname":"Prenom",
+  "partials.search.Phone":"téléphone",
+  "partials.search.Email":"E-mail",
+  "partials.search.searchIndex":"Prenom, Nom ou Personnel-Nbr.",
+  "partials.index.mailbox":"Boîte Mail",
+  "partials.index.sendmail":"Envoyer un email",
+  "partials.index.mailTo":"à",
+  "partials.index.mailFrom":"de",
+  "partials.index.mailSubject":"Sujet",
+  "partials.index.mailText":"Message",
+  "partials.index.mailSend":"Envoyer",
+  "partials.index.mailOpen":"Ouvrir",
+  "partials.index.mailDate":"Date",
+  "partials.index.inbox":"Boîte de réception",
+  "partials.index.outbox":"Boîte d'envoi",
+  "partials.index.mailReply":"répondre",
+  "partials.index.application":"Application",
+  "partials.index.absenceapplication":"Absence Application",
+  "partials.index.timeapplication":"Time Accounts",
+  "partials.index.timerecord":"Durée d'enregistrement",
+  "partials.index.timecorrection":"Time Correction",
+  "partials.index.timestatus":"Time Status",
+  "partials.index.certification":"Certification",
+  "partials.index.payment":"Paiement",
+  "partials.index.account":"Compte",
+
+  "partials.index.account.address":"Adresse",
+  "partials.index.account.address.new":" nouvelle adresse",
+  "partials.index.account.address.edit":"Modifier cette adresse",
+  "partials.account.address.validF":"Valide de",
+  "partials.account.address.validT":"à",
+  "partials.account.address.street":"rue",
+  "partials.account.address.city":"ville",
+  "partials.account.address.phone":"téléphone",
+
+  "partials.index.account.bank":"Compte bancaire",
+  "partials.index.account.bank.new":" nouveau compte bancaire",
+  "partials.index.account.bank.edit":"Modifier ce compte bancaire",
+
+
+  "partials.index.account.profile":"Profile",
+  "partials.index.account.profile.edit":"Edit profile",
+  "partials.index.profile.firstName":"FirstName",
+  "partials.index.profile.lastName":"Last Name",
+  "partials.index.profile.dob":"Date of birth ",
+  "partials.index.profile.situation":"Situation ",
+  "partials.index.profile.post":"Post ",
+  "partials.index.profile.rib":"Rib ",
+  "partials.index.account.profile.edit.required":"ce champ ne peut être vide",
+
+
+
+
+  "partials.index.service":"Services",
+  "partials.index.back":"retour",
+  "partials.index.logout":"Sortir",
+  "partials.index.notif": "Notification"
+
+ }
